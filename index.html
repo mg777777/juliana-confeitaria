@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juliana Arci Confeitaria</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff7f9;
+    color: #3b252c;
+}
+
+header {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(70, 28, 38, 0.72), rgba(70, 28, 38, 0.72)),
+        url("doces.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.hero {
+    max-width: 900px;
+}
+
+.logo-foto {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #ffd6df;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin: 10px 0 18px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.botoes a,
+button {
+    display: inline-block;
+    margin: 8px;
+    padding: 15px 30px;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.botoes a:hover,
+button:hover {
+    transform: scale(1.06);
+}
+
+.whatsapp { background: #25D366; }
+.ifood { background: #EA1D2C; }
+.instagram { background: #C13584; }
+.menu { background: #b85b6a; }
+
+.sobre {
+    padding: 85px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    background: white;
+}
+
+.sobre img {
+    width: 330px;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.sobre-texto {
+    max-width: 650px;
+}
+
+.sobre-texto h2,
+.destaques h2,
+.cardapio h2,
+.encomenda h2,
+.final h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #9b3652;
+}
+
+.sobre-texto p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.destaques {
+    padding: 80px 8%;
+    text-align: center;
+    background: #fff7f9;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    width: 285px;
+    padding: 35px 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.09);
+}
+
+.card h3 {
+    color: #9b3652;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.cardapio {
+    padding: 85px 5%;
+    text-align: center;
+    background: white;
+}
+
+.cardapio p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.cardapio h3 {
+    font-size: 27px;
+    margin: 35px 0 18px;
+    color: #5a2b35;
+}
+
+iframe {
+    width: 100%;
+    max-width: 1000px;
+    height: 620px;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 45px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+    background: white;
+}
+
+.encomenda {
+    padding: 85px 8%;
+    background: #fff7f9;
+    text-align: center;
+}
+
+.form-box {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.form-box label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin: 15px 0 6px;
+    color: #5a2b35;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e6b9c2;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-box textarea {
+    height: 130px;
+    resize: none;
+}
+
+.form-box button {
+    background: #25D366;
+    margin-top: 22px;
+}
+
+.final {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #9b3652, #e98ca4);
+    color: white;
+}
+
+.final h2 {
+    color: white;
+}
+
+.final p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.whats-flutuante {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    background: #25D366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+footer {
+    background: #3b252c;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 38px; }
+    .subtitulo { font-size: 38px; }
+    .hero p { font-size: 16px; }
+    .sobre { padding: 60px 20px; }
+    .sobre img { width: 100%; height: auto; }
+    iframe { height: 520px; }
+    .whats-flutuante { font-size: 14px; padding: 12px 16px; }
+}
+.localizacao {
+    display: inline-block;
+    margin: 8px;
+    padding: 15px 25px;
+    border-radius: 40px;
+    background: #4285F4;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero">
+        <img class="logo-foto" src="juliana.png" alt="Juliana Arci Confeitaria">
+
+        <div class="subtitulo">Doces feitos com amor</div>
+
+        <h1>Ju Arci Confeitaria</h1>
+
+        <p>
+            Confeitaria artesanal com doces finos, doces, bolos e sobremesas feitas com carinho,
+            beleza e muito sabor para momentos inesquecíveis.
+        </p>
+
+        <div class="botoes">
+            <a class="whatsapp" href="https://wa.me/5513974042071" target="_blank">WhatsApp</a>
+            <a class="ifood" href="https://www.ifood.com.br/delivery/santos-sp/ju-arci-confeitaria-gonzaga/7ee14eca-9e2a-4284-8fd5-269e7233722f" target="_blank">iFood</a>
+            <a class="instagram" href="https://www.instagram.com/juarciconfeitaria/" target="_blank">Instagram</a>
+            <a class="menu" href="#cardapios">Ver Cardápios</a>
+        </div>
+    </div>
+</header>
+
+<section class="sobre">
+    <img src="juliana.png" alt="Foto da Juliana">
+
+    <div class="sobre-texto">
+        <h2>Sobre a Juliana</h2>
+
+        <p>
+            A Juliana Arci Confeitaria nasceu da paixão por transformar ingredientes em experiências especiais.
+            Cada doce é preparado com cuidado, capricho e atenção aos detalhes.
+        </p>
+
+        <p>
+            Com opções para festas, aniversários, eventos e momentos únicos, a confeitaria une sabor,
+            beleza e carinho em cada encomenda.
+        </p>
+
+        <p>
+            Aqui, cada produto é feito para encantar desde o primeiro olhar até a última mordida.
+        </p>
+    </div>
+</section>
+
+<section class="destaques">
+    <h2>Nossas Especialidades</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Doces Finos</h3>
+            <p>Doces elegantes e delicados para festas, eventos e celebrações especiais.</p>
+        </div>
+
+        <div class="card">
+            <h3>Doces</h3>
+            <p>Doces saborosos, preparados com carinho e perfeitos para adoçar qualquer momento.</p>
+        </div>
+
+        <div class="card">
+            <h3>Bolos</h3>
+            <p>Bolos personalizados, lindos e feitos com acabamento caprichado para cada ocasião.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cardapio" id="cardapios">
+    <h2>Cardápios</h2>
+    <p>Confira abaixo os menus disponíveis.</p>
+
+<h3>🍰 Menu de doces finos</h3>
+
+<iframe 
+src="https://drive.google.com/file/d/1nqeleJ_ftSb38C_Z7YeH-_x-uyS3hS7p/preview" 
+width="100%" 
+height="600px" 
+style="border:none; border-radius:15px;">
+</iframe>
+<h3>🎂 Menu de doces e bolos</h3>
+
+<iframe 
+src="https://drive.google.com/file/d/1dAChhWe8uMHkPPQc0WaJF0b8is42cEcq/preview?usp=sharing" 
+width="100%" 
+height="600px" 
+style="border:none; border-radius:15px;">
+</iframe>
+</a>
+<section class="encomenda" id="encomenda">
+    <h2>Faça sua encomenda</h2>
+    <p>Preencha as informações abaixo e envie sua solicitação pelo WhatsApp.</p>
+
+    <div class="form-box">
+        <label>Seu nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+
+        <label>O que você deseja?</label>
+        <select id="tipo">
+            <option value="Doce">Doce</option>
+            <option value="Doce fino">Doce fino</option>
+            <option value="Bolo">Bolo</option>
+        </select>
+
+        <label>Observação</label>
+        <textarea id="obs" placeholder="Ex: quantidade, data da festa, sabor, tema do bolo, detalhes da encomenda..."></textarea>
+
+        <button onclick="enviarWhatsApp()">Enviar solicitação no WhatsApp</button>
+    </div>
+</section>
+
+<section class="final">
+    <h2>Seu momento merece um doce especial</h2>
+    <p>Faça sua encomenda pelo WhatsApp, iFood ou acompanhe as novidades pelo Instagram.</p>
+
+<div class="botoes">
+
+    <a class="whatsapp" href="https://wa.me/5513974042071" target="_blank">
+        Chamar no WhatsApp
+    </a>
+
+    <a class="ifood" href="https://www.ifood.com.br/delivery/santos-sp/ju-arci-confeitaria-gonzaga/7ee14eca-9e2a-4284-8fd5-269e7233722f" target="_blank">
+        iFood
+    </a>
+
+    <a class="instagram" href="https://www.instagram.com/juarciconfeitaria/" target="_blank">
+        Instagram
+    </a>
+
+    <a class="localizacao" 
+    href="https://www.google.com/maps/search/?api=1&query=Avenida+Marechal+Deodoro+73+Gonzaga+Santos+SP" 
+    target="_blank">
+        Ver localização 📍
+    </a>
+
+</div>
+</section>
+
+<a class="whats-flutuante" href="https://wa.me/5513974042071" target="_blank">
+    Pedir no WhatsApp
+</a>
+
+<footer>
+    <p>© 2026 Juliana Arci Confeitaria | Site criado com carinho</p>
+</footer>
+
+<script>
+function enviarWhatsApp() {
+    var nome = document.getElementById("nome").value;
+    var tipo = document.getElementById("tipo").value;
+    var obs = document.getElementById("obs").value;
+
+    var mensagem = "Olá, Juliana! Gostaria de fazer uma encomenda.%0A%0A" +
+                   "Nome: " + nome + "%0A" +
+                   "Tipo de pedido: " + tipo + "%0A" +
+                   "Observação: " + obs;
+
+    var link = "https://wa.me/5513974042071?text=" + mensagem;
+    window.open(link, "_blank");
+}
+</script>
+
+</body>
+</html>
